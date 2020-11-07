@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centres d'Interets</title>
+</head>
+<body>
+   <h1> Choose an interest</h1> 
+
+    <button id="edu" onclick="directEdu()">Education</button>
+    <button id="agri" onclick="directAgri()">Agriculture</button>
+   <!--  <button id="tour" onclick="directTour()">Tourism</button > -->
+    <button id="ar" onclick="directAr()">Art</button>
+
+   <script>
+       /*let centreInteret = {
+
+        education : {'page': 'pageEdu', 'titre':'Education'},
+        agriculture: { 'page': 'pageAgri', 'titre': 'Agriculture' },
+        tourisme: { 'page': 'pageTour', 'titre': 'Tourisme' },
+        art: { 'page': 'pageArt', 'titre': 'Art' },
+
+       };*/
+
+       
+
+       function directEdu() {
+            location.replace('landingPage1.html');
+        }
+
+        function directAgri() {
+                location.replace('landingPage.html');
+            }
+
+       /* function directTour() {
+                    location.replace('tourisme.html');
+                }
+*/
+        function directAr() {
+                        location.replace('art.html');
+                        
+                    }
+   </script>
+</body>
+</html>

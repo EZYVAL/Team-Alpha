@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Acceuil</title>
+</head>
+
+<body>
+
+    <h1>Identification</h1>
+
+    <ul>
+        <li> First Name: <input type="text" id="firstN"></li>
+        <li>Second Name:<input type="text" id="secondN"></li>
+        <li>Username:<input type="text" id="userN"></li>
+        <li>Password:<input type="text" id="pass"></li>
+    </ul>
+
+    <button id="connect">Connect</button>
+
+
+
+    <button id="signIn" onclick="direct1()">Sign In</button>
+    <p>
+        <span id="story"></span>
+    </p>
+
+<button id="ok" onclick="direct()">Okay!</button>
+
+    <script>
+        let connectButton = document.getElementById('connect');
+        let okButton = document.getElementById('ok');
+        let collect = function () {
+            let storyDiv = document.getElementById("story");
+
+            let inputs = document.querySelectorAll('input');
+            let tab = [];
+            for (i of inputs) {
+                tab.push(i.value);
+            }
+            console.log(tab);
+            var long = tab[3].length;
+            console.log(long);
+            
+           storyDiv.innerHTML = 'My name is '+tab[0]+ ' '+ tab[1]+'. My username is '+ tab[2] + ' and my password is ' + '*'.repeat(long);
+        };
+        connectButton.addEventListener('click', collect);
+
+        function direct(){
+            location.replace('interet.html');
+        }
+
+        function direct1() {
+                location.replace('enregistrement.html');
+            }
+    </script>
+
+</body>
+
+</html>
