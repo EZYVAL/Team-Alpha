@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Next</title>
+</head>
+<body>
+   <h1>Art Next</h1> 
+
+
+
+
+<button id="ar" onclick="back()">Back</button>
+   <script>
+
+       //let x =window.location.href.split('?');
+		let x = window.location.search.substring(1)
+		 x = unescape(x);
+		let obj = JSON.parse(x);
+        console.log(obj);
+        
+        let div = document.createElement('div');
+
+
+        function back() {
+                location.replace('art.html');
+            }
+	</script>
+   </script>
+</body>
+</html>

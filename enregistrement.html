@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enregistrement</title>
+</head>
+<body>
+   <h1> Sign In</h1>
+   
+<ul>
+    <li> First Name: <input type="text" id="firstN"></li>
+    <li> Second Name:<input type="text" id="secondN"></li>
+    <li>Username:<input type="text" id="userN"></li>
+    <li>Password:<input type="text" id="pass"></li>
+</ul>
+
+
+<button id="connect">Connect</button>
+
+<p>
+    <span id="story"></span>
+</p>
+
+<button id="clear">Clear!</button>
+
+<button id="forgot">Forgot Password?</button>
+
+
+<p>
+    <span> Next</span>
+</p>
+
+<button id="ok" onclick="direct()">Okay!</button>
+ <script> 
+
+
+    
+ let connectButton = document.getElementById('connect');
+ // créer un formulaire plus haut
+var tab1 = [];
+var tab2 = [];
+var tab3 = [];
+var tab4 = [];
+
+    let inputs = document.querySelectorAll('input');
+
+    for (i of inputs) {
+            console.log(inputs[i]);
+    }
+
+    var storyDiv = document.getElementById("story");
+
+    let affiche = function () {
+        
+        tab1.push(inputs[0].value);
+        tab2.push(inputs[1].value);
+
+        for(i in tab3){
+            if (inputs[2].value == tab3[i]){
+                inputs[2].value = prompt('This username already exist! Enter another one.');
+            }
+        }
+        tab3.push(inputs[2].value);
+        tab4.push(inputs[3].value);
+
+        var long = inputs[3].value.length;
+        console.log(long);
+        storyDiv.innerHTML = 'My name is ' + inputs[0].value + ' ' + inputs[1].value + '. My username is ' + inputs[2].value + ' and my password is ' + '*'.repeat(long);
+    }
+    
+    connectButton.addEventListener('click', affiche);
+
+    let cleaR = function () {
+            for (i = 0; i <= 3; i++) {
+                inputs[i].value = "";
+            }
+            
+        };
+
+   let clearButton = document.getElementById('clear');
+   connectButton.addEventListener('click', cleaR);
+
+
+   let forgotButton = document.getElementById('forgot');
+
+   let forgotPass = function (){
+       alert('Enter your first name ');
+       let nom = prompt('First Name: ');
+       alert('Enter your second name ');
+       let prenom = prompt( 'Second Name');
+
+       let taille = tab1.length;
+       for(let i = 0; i <taille; i++){
+           if(tab1[i] == nom && tab2[i] == prenom){
+               alert('your password is ' + tab4[i]);
+           }
+       }
+    };
+   
+  forgotButton.addEventListener('click', forgotPass) ;
+
+   function direct() {
+        location.replace('interet.html');
+    }
+
+
+ </script>
+</body>
+</html>
