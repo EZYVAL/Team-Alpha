@@ -1,36 +1,55 @@
-<html lang="en">
+
+<!DOCTYPE html>
+</html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enregistrement</title>
-</head>
-<body>
-   <h1> Sign In</h1>
+</head >
+<body style="font-family: sans-serif;">
+    <div class="row" style="display: flex; justify-content: center; margin-top: 100px;">
+        <div class="col-lg-6" style="width: 300px; background-color: lawngreen; justify-content: center;border-radius: 10px;">
+            <h1 style="text-align: center;margin-top: 65px;">Cool Farming</h1>
+            <h3 style="text-align:center;">The Place To Learn Farming</h3>
+        </div>
+        <div class="col-lg-6" style="background-color: lemonchiffon; text-align: center; border-radius: 10px; padding-bottom: 20px;">
+            <h1> Sign In</h1>
    
-<ul>
-    <li> First Name: <input type="text" id="firstN"></li>
-    <li> Second Name:<input type="text" id="secondN"></li>
-    <li>Username:<input type="text" id="userN"></li>
-    <li>Password:<input type="text" id="pass"></li>
-</ul>
+            <ul style="list-style-type: none; justify-content: center; line-height: 2em; font-size:12px;">
+                <li style="margin-right: 11px;"> First Name: <input type="text" id="firstN"></li>
+                <li style="margin-right: 20px;"> Second Name:<input type="text" id="secondN"></li>
+                <li style="margin-right: 3px;">Username:<input type="text" id="userN"></li>
+                <li style="margin-right: 2px;">Password:<input type="text" id="pass"></li>
+            </ul>
+            
+            
+            <button id="connect">Connect</button>
+            
+            <p>
+                <span id="story"></span>
+            </p>
+            
+            <button id="clear">Clear!</button>
+            
+            <button id="forgot">Forgot Password?</button>
+            
+            
+            <p>
+                <span> Next</span>
+            </p>
+            
+            <button id="ok" onclick="direct()">Okay!</button>
+
+        </div>
+    </div>
 
 
-<button id="connect">Connect</button>
-
-<p>
-    <span id="story"></span>
-</p>
-
-<button id="clear">Clear!</button>
-
-<button id="forgot">Forgot Password?</button>
 
 
-<p>
-    <span> Next</span>
-</p>
 
-<button id="ok" onclick="direct()">Okay!</button>
+
+
+
  <script> 
 
 
