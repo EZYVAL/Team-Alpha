@@ -19,21 +19,21 @@
   </head>
 
 
-<body>
+<body style="font-family: sans-serif;">
   
 <header>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-success " style="height: 50px; ">     
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="img">
-                <img src="/Landing_page/img/logo.png" alt="" style="height: 50px; width: 50px; background-color: transparent;">
+                <a href="landingPage.html"><img src="/img/logo.png" alt="" style="height: 50px; width: 50px; background-color: transparent;"></a>
             </div>
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#" style="color:white !important; margin-right:100px;">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" style="color:white !important; margin-right:100px">Contact and expert</a>
+              <a class="nav-link" href="#" style="color:white !important; margin-right:100px"> </a>
             </li>
 
             <li class="nav-item">
@@ -99,10 +99,11 @@
 <div class="container">
   <div class="row">
     <div class="" style="text-align: center; width: 200px; height: 250px; box-shadow: 10px 10px 50px 10px gray; border-radius: 10px">
-      <a href='Hackathon_dibril/index.html'><img src="img/FormationMais.jpg" id="one" alt="" style="height: 150px; width: 200px;border-radius: 10px;"></a>
+      <a href='maïs.html'><img src="img/FormationMais.jpg" alt="" style="height: 150px; width: 200px;border-radius: 10px;" onmouseover="displayOb();" onmouseout="displayOb();"></a>
         <h6> <span> Formation Complète Culture de Mais</span></h6>
         <p style="color: lawngreen;"><b>100 000 FCFA</b></p>
     </div>
+
 
 
     <div class="" style="text-align: center; width: 200px; height: 250px; box-shadow: 10px 10px 50px 10px gray; border-radius: 10px">
@@ -113,7 +114,7 @@
 
 
     <div class="" style="text-align: center;width: 200px; height: 250px; box-shadow: 10px 10px 50px 10px gray; border-radius: 10px">
-      <a href="#"><img src="img/FormationTomate.jpg" id="three" alt="" style="height: 150px; width: 200px;border-radius: 10px;"></a>
+      <a href="tomate.html"><img src="img/FormationTomate.jpg" id="three" alt="" style="height: 150px; width: 200px;border-radius: 10px;"></a>
         <h6> <span> Formation Complète Culture Tomate</span></h6>
         <p style="color: lawngreen;"><b>100 000 FCFA</b></p>
     </div>
@@ -121,7 +122,7 @@
 
 
       <div class="" style="text-align: center; width: 200px; height: 250px; box-shadow: 10px 10px 50px 10px gray; border-radius: 10px">
-        <a href="#"><img src="img/FormationPasteque.jpg" id="four" alt=""style="height: 150px; width: 200px;border-radius: 10px;"></a>
+        <a href="pastèque.html"><img src="img/FormationPasteque.jpg" id="four" alt=""style="height: 150px; width: 200px;border-radius: 10px;"></a>
           <h6><span>Formation Complète Culture Pastèque</span></h6>
           <p style="color: lawngreen;"><b>100 000 FCFA</b></p> 
       </div>
@@ -135,7 +136,7 @@
     </div>
 
     <div class="" style="text-align: center; width: 200px; height: 250px; box-shadow: 10px 10px 50px 10px gray; border-radius: 10px">
-      <a href="#"><img src="img/FormationPoivron.jpg" id="six" alt="" style="height: 150px; width: 200px;border-radius: 10px;"></a>
+      <a href="poivron.html"><img src="img/FormationPoivron.jpg" id="six" alt="" style="height: 150px; width: 200px;border-radius: 10px;"></a>
         <h6> <span> Formation Complète Culture du Poivron</span></h6>150
         <p style="color: lawngreen;"><b>100 000 FCFA</b></p>      
     </div>
@@ -158,7 +159,18 @@
 </div>
 
 
-<footer style="margin-top: 200px;">
+
+<div id="one" style="visibility: hidden;">
+  <h6>Title: Growing Corn</h6>
+  <p>Creation Date: 10 Nov 2020</p>
+  <p>Total Hour: 30</p>
+  <p>Level: intermediate</p>
+  <h6>Lecturer: Joseline</h6>
+</div>
+
+
+
+<footer style="margin-top: 200px;"><button id="agri" onclick="directInt()" style="margin-left:800px;" >Back</button>
   <hr>
   <div class="container">
     <div class="row" style="display: flex; justify-content: space-between;">
@@ -188,7 +200,7 @@
 
 <script >
 
-
+/*
 var tableau = [];
 
 var descripCour = {
@@ -207,12 +219,18 @@ let survol=function(){
     var affichage = document.createElement('div');
     affichage.style.position = 'absolute';
     affichage.style.zIndex = '5px';
-    affichage.style.border = ' solid black 2px';
+    affichage.style.border = ' solid lawngreen 2px';
     affichage.style.height= '250px';
     affichage.style.width = '150px';
     affichage.style.top = '700px';
     affichage.style.left = '200px';
-    affichage.style.backgroundColor ='gray';
+    affichage.style.backgroundColor ='white';
+    affichage.style.boxShadow = '10px 10px 50px 10px gray';
+    affichage.style.borderRadius='10px';
+    
+   
+
+ 
     for(let i in descripCour){
         var p = document.createElement('p');
         p.innerHTML = i + ' : ' + descripCour[i];
@@ -234,17 +252,38 @@ let passage = function(){
 
     location.replace('artNext.html');
 
-}
+}*/ 
+
+function displayOb(){
+  var  element = document.getElementById('one');
+  element.style.position = 'absolute';
+    element.style.zIndex = '5px';
+   element.style.border = ' solid lawngreen 2px';
+    element.style.height= '250px';
+    element.style.width = '150px';
+    element.style.top = '700px';
+    element.style.left = '200px';
+    element.style.backgroundColor ='white';
+    element.style.boxShadow = '10px 10px 50px 10px gray';
+    element.style.borderRadius='10px';element
+  if(element.style.visibility == 'hidden'){
+    element.style.visibility = 'visible';
+  }else{
+    element.style.visibility = 'hidden';
+  }
+};
 
 let souris = document.getElementById('one');
-console.log(souris);
+/*console.log(souris);
 
-    souris.addEventListener('mouseover', survol);
+    souris.addEventListener('mouseover', survol);*/
 
     souris.addEventListener('click', passage);
 
 
-
+    function directInt() {
+            location.replace('interet.html');
+        }
 
 </script>
 <body>

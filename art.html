@@ -11,19 +11,9 @@
         <div  style="height: fit-content;">
             <a id="lien" href="artNext.html" style="display: block;">
                 <div class="container_img" style="height: fit-content;">
-                    <img alt width="240" height="135" src="jo.jpg" id="one" onmouseover="displayOb();" onmouseout="displayOb();" >
+                    <img alt width="240" height="135" src="jo.jpg" id="one" >
 
                 </div>
-
-                <div id="oneaffi" style="visibility:hidden;">
-                    
-               <p>Title</p>
-               <p>Creation's date</p>
-               <p>Total hour</p>
-               <p>Level</p> 
-               <p>Lecturer</p>
-                </div>
-
                 <div class="titreprix" style="height: fit-content;">
                     <div class="titre" >
                         Cours d'art
@@ -40,7 +30,7 @@
 <button id="but">Next</button>
 <script>
 
-   /* let descripCour = {
+    let descripCour = {
         "titre": "cours d'art plastique",
         "date_creation" : "5 nov 2020",
         "total_hour" : "30",
@@ -99,26 +89,8 @@
             window.open(`artNext.html?${escape(variable)}`, `_self`);
         });
 
-*/
 
     
-let descripTomate = ["Title : Growing Tomatoes", "Creation's date : 5 nov 2020", "Total hour : 30", "Level : intermediate", "Lecturer : Joseline"];
-   
-  
- 
-  function displayOb(){
-      var element = document.getElementById('oneaffi');
-      if(element.style.visibility == 'hidden'){
-         // element.style.display = 'block';
-        element.style.visibility = 'visible';
-      }else{
-          //element.style.display = 'none';
-          element.style.visibility='hidden';
-      }
-  };
-
-  
- console.log('bon'); 
 </script>
 </body>
 </html>

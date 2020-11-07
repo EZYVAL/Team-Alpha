@@ -1,86 +1,74 @@
-<html>
-
-<head>
-    <meta charset="utf-8" />
-    <title>Acceuil</title>
-</head>
-
-<body>
-
-    <h1>Identification</h1>
-
-    <ul>
-        
-        <li>Username:<input type="text" id="userN"></li>
-        <li>Password:<input type="text" id="pass"></li>
-    </ul>
-
-    <button id="connect">Connect</button>
-
-  <br>
-
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Acceuil</title>
+  </head>
+  <body style="font-family: sans-serif;">
+        <div class="row" style="display: flex; justify-content: center; margin-top: 100px;">
+            <div class="col-lg-6" style="width: 300px; background-color: lawngreen; justify-content: center;border-radius: 10px;">
+                <h1 style="text-align: center;margin-top: 65px;">Cool Farming</h1>
+                <h3 style="text-align:center;">The Place To Learn Farming</h3>
+            </div>
+            <div class="col-lg-6" style="background-color: lemonchiffon; text-align: center; border-radius: 10px;">
+                <h1>Identification</h1>
     
-
-    <p>
-        <span id="story"></span>
-    </p>
-
-    <button id="ok" onclick="direct()">Okay!</button>
-
-    <br>
-
-    <p>
-        <span> Or </span>
-    </p>
-
-    <button id="signIn" onclick="direct1()">Sign In</button>
-
-    <p>
-        <span>  </span>
-    </p>
-<button id="signIn" onclick="direct1()">Forgot Pasword ?</button>
-    <script>
-        let connectButton = document.getElementById('connect');
-        let okButton = document.getElementById('ok');
-        let collect = function () {
-            let storyDiv = document.getElementById("story");
-
-            let inputs = document.querySelectorAll('input');
-            let tab = [];
-            for (i of inputs) {
-                tab.push(i.value);
+                <ul style="list-style-type: none;">
+                    
+                    <li style="margin-bottom: 5px;">Username:<input type="text" id="userN"></li>
+                    <li>Password :<input type="text" id="pass"></li>
+                </ul>
+            
+                <button id="connect">Connect</button>       
+                
+            
+                <p>
+                    <span id="story"></span>
+                </p>
+            
+                <button id="ok" onclick="direct()">Okay!</button>
+            
+                <p>
+                    <span> Or </span>
+                </p>
+            
+                <button id="signIn" onclick="direct1()">Sign In</button>
+    
+            <button id="signIn" onclick="direct1()">Forgot Pasword ?</button>
+    
+            </div>
+        </div>
+    
+    
+        <script>
+            let connectButton = document.getElementById('connect');
+            let okButton = document.getElementById('ok');
+            let collect = function () {
+                let storyDiv = document.getElementById("story");
+    
+                let inputs = document.querySelectorAll('input');
+                let tab = [];
+                for (i of inputs) {
+                    tab.push(i.value);
+                }
+                console.log(tab);
+                var longueur = tab.length - 1; 
+                var long = tab[longueur].length;
+                console.log(long);
+    
+                storyDiv.innerHTML =  ' My username is ' + tab[2] + ' and my password is ' + '*'.repeat(long);
+            };
+            connectButton.addEventListener('click', collect);
+    
+            function direct() {
+                location.replace('interet.html');
             }
-            console.log(tab);
-            var longueur = tab.length - 1; 
-            var long = tab[longueur].length;
-            console.log(long);
-
-            storyDiv.innerHTML =  ' My username is ' + tab[2] + ' and my password is ' + '*'.repeat(long);
-        };
-        connectButton.addEventListener('click', collect);
-
-        function direct() {
-            location.replace('interet.html');
-        }
-
-        function direct1() {
-            location.replace('enregistrement.html');
-        }
-    </script>
-
-</body>
-
-</html>
-
-<footer>
-
-
-
-</footer>
-
-
-<body>
-
-</body>
-
-</html>
+    
+            function direct1() {
+                location.replace('enregistrement.html');
+            }
+        </script>
+      
+  </body>
+  </html>
